@@ -1,0 +1,9 @@
+body.ttrss_main .action-chooser .action-button .dijitArrowButtonInner {
+    display : inline ! important;
+}
+
+body.ttrss_main .action-chooser .userpic-gravatar {
+    width : 21px;
+    height : 21px;
+    border-radius: 50% 50%;
+}
