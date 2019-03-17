@@ -6,7 +6,9 @@ class UI_Gravatar extends Plugin {
 	function about() {
 		return array(1.0,
 			"Shows your globally recognized avatar (Gravatar) in the UI",
-			"fox");
+			"fox",
+			false,
+			"https://git.tt-rss.org/fox/ttrss-ui-gravatar");
 	}
 
 	function init($host) {
