@@ -1,14 +1,14 @@
 <?php
-class UI_Gravatar extends Plugin {
+class UI_Libravatar extends Plugin {
 	private $host;
-	private $gravatar_hash = "";
+	private $libravatar_hash = "";
 
 	function about() {
 		return array(1.0,
-			"Shows your globally recognized avatar (Gravatar) in the UI",
-			"fox",
+			"Shows your globally recognized avatar (Libravatar) in the UI",
+			"kierun",
 			false,
-			"https://git.tt-rss.org/fox/ttrss-ui-gravatar");
+			"https://git.tt-rss.org/kierun/ttrss-ui-libravatar");
 	}
 
 	function init($host) {
@@ -18,15 +18,14 @@ class UI_Gravatar extends Plugin {
 		$sth->execute([$_SESSION['uid']]);
 
 		if ($row = $sth->fetch()) {
-			$this->gravatar_hash = md5(trim($row['email']));
+			$this->libravatar_hash = md5(trim($row['email']));
 		}
 
-		//$host->add_hook($host::HOOK_PREFS_TAB, $this);
 	}
 
 	function get_js() {
-		if ($this->gravatar_hash) {
-			return str_replace("%GRAVATAR_HASH%", $this->gravatar_hash,
+		if ($this->libravatar_hash) {
+			return str_replace("%LIBRAVATAR_HASH%", $this->libravatar_hash,
 				file_get_contents(__DIR__ . "/init.js"));
 		} else {
 			return "";
@@ -34,7 +33,7 @@ class UI_Gravatar extends Plugin {
 	}
 
 	function get_css() {
-		if ($this->gravatar_hash) {
+		if ($this->libravatar_hash) {
 			return file_get_contents(__DIR__ . "/init.css");
 		} else {
 			return "";

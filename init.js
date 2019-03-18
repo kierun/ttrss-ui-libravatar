@@ -4,7 +4,7 @@ require(['dojo/_base/kernel', 'dojo/ready'], function  (dojo, ready) {
             const btn = document.querySelector(".action-chooser .dijitButtonText");
 
             if (btn)
-                btn.innerHTML = "<img referrerpolicy='no-referrer' class='userpic-gravatar' src=\"https://secure.gravatar.com/avatar/%GRAVATAR_HASH%?s=96\">";
+                btn.innerHTML = "<img referrerpolicy='no-referrer' class='userpic-libravatar' src=\"https://seccdn.libravatar.org/avatar/%LIBRAVATAR_HASH%?s=96\">";
 
             return true;
         });
