@@ -8,7 +8,7 @@ class UI_Libravatar extends Plugin {
 			"Shows your globally recognized avatar (Libravatar) in the UI",
 			"kierun",
 			false,
-			"https://git.tt-rss.org/kierun/ttrss-ui-libravatar");
+			"https://github.com/kierun/ttrss-ui-libravatar/issues/1");
 	}
 
 	function init($host) {
